@@ -23,7 +23,7 @@ import java.util.concurrent.ThreadPoolExecutor
 /**
  * Contains the core multithreading protocol.
  */
-class MultithreadingProtocol() {
+class MultithreadingProtocol {
     fun run(r: Runnable) {
         try {
             FullyThreadedThreadPool.executorPool.execute(r)

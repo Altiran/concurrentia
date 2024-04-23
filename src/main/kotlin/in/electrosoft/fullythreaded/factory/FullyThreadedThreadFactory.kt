@@ -24,9 +24,9 @@ import java.util.concurrent.atomic.AtomicInteger
  * Supporting class for ThreadPool
  */
 object FullyThreadedThreadFactory : ThreadFactory {
-    var counter: AtomicInteger = AtomicInteger(1)
+    private var counter: AtomicInteger = AtomicInteger(1)
 
-    override fun newThread(r: Runnable?): Thread {
+    override fun newThread(r: Runnable): Thread {
         return Thread(r, String.format("Fully Threaded Thread %s", counter.incrementAndGet()))
     }
 }

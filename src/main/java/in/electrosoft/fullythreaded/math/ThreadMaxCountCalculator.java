@@ -33,7 +33,7 @@ public class ThreadMaxCountCalculator {
 
         if (memory <= 1) {
             return 1; // memory space is too low
-        } else if (memory <= 2) {
+        } else if (memory == 2) {
             return 5744; // 2 mb is actually enough
         } else if (memory <= 4) {
             return 5743;
