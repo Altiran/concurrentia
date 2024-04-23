@@ -1,0 +1,80 @@
+{
+  "formatVersion": "1.1",
+  "component": {
+    "group": "in.electrosoft",
+    "module": "FullyThreaded",
+    "version": "1.0",
+    "attributes": {
+      "org.gradle.status": "release"
+    }
+  },
+  "createdBy": {
+    "gradle": {
+      "version": "8.7"
+    }
+  },
+  "variants": [
+    {
+      "name": "apiElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-api",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "files": [
+        {
+          "name": "FullyThreaded-1.0.jar",
+          "url": "FullyThreaded-1.0.jar",
+          "size": 5017380,
+          "sha512": "fa445651c46cc9056d78297cd3fcb4bf569b5b4421415a7197fd767c449bf3d5d95b3a4f3ac7931f0d176d2096e57ed3a05a729e88b8af121e93edd75c5bde32",
+          "sha256": "3aa4a2520024fc0bcc7121259f9f310cd0e9289abddb2972314716aa52e9e7ee",
+          "sha1": "8c53e4cfb078c85df7159d0ea50b6393b703629d",
+          "md5": "49839b733194cf862453de5f5db0bb22"
+        }
+      ]
+    },
+    {
+      "name": "runtimeElements",
+      "attributes": {
+        "org.gradle.category": "library",
+        "org.gradle.dependency.bundling": "external",
+        "org.gradle.jvm.environment": "standard-jvm",
+        "org.gradle.jvm.version": 8,
+        "org.gradle.libraryelements": "jar",
+        "org.gradle.usage": "java-runtime",
+        "org.jetbrains.kotlin.platform.type": "jvm"
+      },
+      "dependencies": [
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-stdlib",
+          "version": {
+            "requires": "1.9.23"
+          }
+        },
+        {
+          "group": "org.jetbrains.kotlin",
+          "module": "kotlin-reflect",
+          "version": {
+            "requires": "1.9.23"
+          }
+        }
+      ],
+      "files": [
+        {
+          "name": "FullyThreaded-1.0.jar",
+          "url": "FullyThreaded-1.0.jar",
+          "size": 5017380,
+          "sha512": "fa445651c46cc9056d78297cd3fcb4bf569b5b4421415a7197fd767c449bf3d5d95b3a4f3ac7931f0d176d2096e57ed3a05a729e88b8af121e93edd75c5bde32",
+          "sha256": "3aa4a2520024fc0bcc7121259f9f310cd0e9289abddb2972314716aa52e9e7ee",
+          "sha1": "8c53e4cfb078c85df7159d0ea50b6393b703629d",
+          "md5": "49839b733194cf862453de5f5db0bb22"
+        }
+      ]
+    }
+  ]
+}
