@@ -85,18 +85,18 @@ dependencies {
 
 jar {
     duplicatesStrategy = DuplicatesStrategy.EXCLUDE
-    configurations.embed.each {dep ->
+    configurations.embed.each { dep ->
         exclude 'LICENSE.txt'
         from(project.zipTree(dep)) {
             exclude 'META-INF', 'META-INF/**'
         }
     }
     manifest.attributes(
-            "Built-By": System.properties['user.name'],
-            "Created-By": System.properties['java.vm.version'] + " (" + System.properties['java.vm.vendor'] + ")",
-            "Implementation-Title": project.tr_name,
-            "Implementation-Version": project.tr_version,
-            "Implementation-Vendor": project.tr_website
+        "Built-By": System.properties['user.name'],
+        "Created-By": System.properties['java.vm.version'] + " (" + System.properties['java.vm.vendor'] + ")",
+        "Implementation-Title": project.tr_name,
+        "Implementation-Version": project.tr_version,
+        "Implementation-Vendor": project.tr_website
     )
 }
 

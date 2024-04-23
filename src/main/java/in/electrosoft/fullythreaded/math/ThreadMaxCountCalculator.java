@@ -26,6 +26,7 @@ public class ThreadMaxCountCalculator {
      * Calculates the maximum number of threads that the system can support.
      * Based on my calculations, the number of threads is inversely proportional to the amount of memory.
      * Source: StackOverflow
+     *
      * @return Max number of threads that the system can handle (as Integer)
      */
     public static int getMaxThreadCapability() {

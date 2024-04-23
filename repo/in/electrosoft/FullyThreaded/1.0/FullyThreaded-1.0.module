@@ -29,11 +29,11 @@
         {
           "name": "FullyThreaded-1.0.jar",
           "url": "FullyThreaded-1.0.jar",
-          "size": 5017273,
-          "sha512": "6b90d3da93354c2334a8e007b008254af734b009839f7c0a979121bd26886b587d07a89cc0efd2c788024237f104f83efce5aa3d1277d300e4a184b671ae9abf",
-          "sha256": "bb22fd776af95cfac2c5c0d12377b773ad3b3e8010e734ff6199cbdfd8674a35",
-          "sha1": "43dd895937232772a1d9d84aeb5d0dfcee20ff81",
-          "md5": "0acc3f5a5e1b8f6f3af1d820e8e7dae9"
+          "size": 5017276,
+          "sha512": "6b72bfce60f02d92d1730ca1b0331ed83e1518f9253e24e191d17ec1182859ea8f1372ea367966c2cf2139e3effe72c558644efbb601891160959ad5700fa6dd",
+          "sha256": "fa0410b20ffcb34fabd1b01d0651d8d0ec1e594b3af4e8874a5dde7b2a8590f9",
+          "sha1": "3b447d667a4edb30befc7f5cb6f299b696c90162",
+          "md5": "7aa7b3cb05c79bd05a5e1fc7f8ff61bd"
         }
       ]
     },
@@ -68,11 +68,11 @@
         {
           "name": "FullyThreaded-1.0.jar",
           "url": "FullyThreaded-1.0.jar",
-          "size": 5017273,
-          "sha512": "6b90d3da93354c2334a8e007b008254af734b009839f7c0a979121bd26886b587d07a89cc0efd2c788024237f104f83efce5aa3d1277d300e4a184b671ae9abf",
-          "sha256": "bb22fd776af95cfac2c5c0d12377b773ad3b3e8010e734ff6199cbdfd8674a35",
-          "sha1": "43dd895937232772a1d9d84aeb5d0dfcee20ff81",
-          "md5": "0acc3f5a5e1b8f6f3af1d820e8e7dae9"
+          "size": 5017276,
+          "sha512": "6b72bfce60f02d92d1730ca1b0331ed83e1518f9253e24e191d17ec1182859ea8f1372ea367966c2cf2139e3effe72c558644efbb601891160959ad5700fa6dd",
+          "sha256": "fa0410b20ffcb34fabd1b01d0651d8d0ec1e594b3af4e8874a5dde7b2a8590f9",
+          "sha1": "3b447d667a4edb30befc7f5cb6f299b696c90162",
+          "md5": "7aa7b3cb05c79bd05a5e1fc7f8ff61bd"
         }
       ]
     }

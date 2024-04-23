@@ -19,10 +19,12 @@ package `in`.electrosoft.fullythreaded.exceptions
 /**
  * Thrown when the max compatible number of threads is exceeded.
  */
-class MaxThreadAmountExceededException(cause: Throwable):
-    Exception(String.format(
+class MaxThreadAmountExceededException(cause: Throwable) :
+    Exception(
         String.format(
-            "The maximum thread amount capability was reached",
-            cause
+            String.format(
+                "The maximum thread amount capability was reached",
+                cause
+            )
         )
-    ))
+    )
