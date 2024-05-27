@@ -13,11 +13,11 @@ empowering you to focus on what truly matters: your code.
 
 [ ![Discord](https://canary.discordapp.com/api/guilds/729950513352933386/widget.png) ](https://discord.gg/jsSGFeR)
 [ ![Latest Release](https://img.shields.io/badge/Latest%20Release-1.0-orange)](https://github.com/electrosoftllc/fully-threaded/releases/tag/1.0)
-[ ![GitHub Forks](https://img.shields.io/github/forks/electrosoftllc/fully-threaded.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/electrosoftllc/fully-threaded/network)
-[ ![GitHub Stars](https://img.shields.io/github/stars/electrosoftllc/fully-threaded.svg?style=social&label=Star&maxAge=2592000)](https://github.com/electrosoftllc/fully-threaded/stargazers)
-[ ![GitHub Watches](https://img.shields.io/github/watchers/electrosoftllc/fully-threaded.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/electrosoftllc/fully-threaded/watchers)
+[ ![GitHub Forks](https://img.shields.io/github/forks/electrosoftllc/fully-threaded.svg)](https://github.com/electrosoftllc/fully-threaded/fork)
+[ ![GitHub Stars](https://img.shields.io/github/stars/electrosoftllc/fully-threaded.svg)](https://github.com/electrosoftllc/fully-threaded/stargazers)
+[ ![GitHub Watches](https://img.shields.io/github/watchers/electrosoftllc/fully-threaded.svg)](https://github.com/electrosoftllc/fully-threaded/watchers)
 [ ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/electrosoftllc/fully-threaded/graphs/commit-activity)
-[ ![Maintainer](https://img.shields.io/badge/Maintainer-ElectroSoft-blue)](https://github.com/electrosoftllc)
+[ ![Maintainer](https://img.shields.io/badge/Maintainer-ElectroSoft_LLC-blue)](https://github.com/electrosoftllc)
 [ ![Build Status](https://circleci.com/gh/electrosoftllc/fully-threaded.svg?style=svg "Build Status")](https://github.com/electrosoftllc/fully-threaded)
 
 **Like the project? Make sure to leave a ⭐ on the repository!**
@@ -31,7 +31,7 @@ repositories {
   maven { url 'https://raw.githubusercontent.com/electrosoftllc/fully-threaded/master/repo/' }
 }
 dependencies {
-  implementation 'in.electrosoft:fully-threaded:1.0'
+  implementation 'in.electrosoft:FullyThreaded:1.0'
 }
 ```
 
@@ -44,7 +44,7 @@ dependencies {
 </repository>
 <dependency>
   <groupId>in.electrosoft</groupId>
-  <artifactId>fully-threaded</artifactId>
+  <artifactId>FullyThreaded</artifactId>
   <version>1.0</version>
 </dependency>
 ```
