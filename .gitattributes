@@ -1,0 +1,3 @@
+gradlew linguist-generated=true
+gradlew.bat eol=crlf linguist-generated=true
+* text=auto eol=lf

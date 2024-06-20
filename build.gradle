@@ -1,69 +1,39 @@
-/*
- * Copyright 2017-present ElectroSoft LLC. All rights reserved. All wrongs reversed.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
-
-buildscript {
-    repositories {
-        mavenLocal()
-        mavenCentral()
-
-        maven { url 'https://plugins.gradle.org/m2' }
-        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
-        maven { url "https://jitpack.io" }
-    }
-}
-
 plugins {
     id 'java' apply true
     id 'idea' apply true
-    id 'org.jetbrains.kotlin.jvm' version '1.9.23'
     id 'java-library' apply true
     id 'maven-publish' apply true
+    id('org.jetbrains.dokka') version '1.9.20' apply true
+    id 'org.jetbrains.kotlin.jvm' version '2.0.0' apply true
 }
+
+def buildUser = System.properties['user.name']
+def buildJava = System.properties['java.vm.version']
+def buildVendor = System.properties['java.vm.vendor']
 
 configurations {
     embed
     implementation.extendsFrom(embed)
 }
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = JavaVersion.VERSION_1_8
+java {
+    sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = JavaVersion.VERSION_21
+}
+
 compileJava.options.encoding = 'UTF-8'
 
 group = project.tr_group
-archivesBaseName = project.tr_name
 version = project.tr_version
 
+base {
+    archivesName = project.tr_name
+}
+
 repositories {
-    mavenLocal()
     mavenCentral()
-
+    maven { url 'https://plugins.gradle.org/m2' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
     maven { url 'https://jitpack.io' }
-    maven { url 'https://repository.apache.org/content/repositories/releases/org/apache/xmlgraphics/' }
-}
-
-compileKotlin {
-    kotlinOptions {
-        suppressWarnings = false
-        jvmTarget = '1.8'
-    }
-}
-
-compileTestKotlin {
-    kotlinOptions {
-        jvmTarget = '1.8'
-    }
 }
 
 idea {
@@ -73,13 +43,12 @@ idea {
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    testImplementation 'org.jetbrains.kotlin:kotlin-test'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0-RC'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test:2.0.0'
+    testImplementation 'org.jetbrains.kotlin:kotlin-test:2.0.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.2'
 
-    embed 'org.jetbrains.kotlin:kotlin-stdlib:1.9.23'
-    embed 'org.jetbrains.kotlin:kotlin-reflect:1.9.23'
-
+    embed 'org.jetbrains.kotlin:kotlin-stdlib:2.0.0'
     embed fileTree('libs')
 }
 
@@ -92,11 +61,11 @@ jar {
         }
     }
     manifest.attributes(
-        "Built-By": System.properties['user.name'],
-        "Created-By": System.properties['java.vm.version'] + " (" + System.properties['java.vm.vendor'] + ")",
-        "Implementation-Title": project.tr_name,
-        "Implementation-Version": project.tr_version,
-        "Implementation-Vendor": project.tr_website
+        'Built-By': buildUser,
+        'Created-By': "${buildJava} (${buildVendor})",
+        'Implementation-Title': project.tr_name,
+        'Implementation-Version': project.tr_version,
+        'Implementation-Vendor': project.tr_website
     )
 }
 
@@ -105,47 +74,37 @@ sourceSets {
     main.java.srcDirs += 'src/main/java'
 }
 
-kotlin {
-    sourceSets {
-        jvmMain {
-            dependencies {
-                implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.9.23'
-            }
-        }
-    }
-}
-
 test {
     useJUnitPlatform()
-    useTestNG()
 }
 
 publishing {
     repositories {
         maven {
-            url = "repo/"
+            url = 'repo/'
         }
     }
 
     publications {
-        mavenJava(MavenPublication) {
-            from components.java
+        create('mavenJava', MavenPublication) {
+            //from components.java
+            from components.kotlin
             pom {
-                name = 'fullythreaded'
+                name = 'FullyThreaded'
                 description = 'Simple and open-source multithreading utility.'
-                url = 'https://github.com/electrosoftllc/fully-threaded'
+                url = 'https://github.com/Altiran/fully-threaded'
                 licenses {
                     license {
-                        name = 'Apache License 2.0'
-                        url = 'http://www.apache.org/licenses/LICENSE-2.0'
+                        name = 'GNU General Public License v3.0'
+                        url = 'https://www.gnu.org/licenses/gpl-3.0.html'
                     }
                 }
 
                 developers {
                     developer {
-                        id = 'fully-threaded'
-                        name = 'ElectroSoft LLC'
-                        email = 'ab20zipyt@electrosoft.in'
+                        id = 'altiran'
+                        name = 'Altiran Studios'
+                        email = 'contact@altiran.com'
                     }
                 }
             }

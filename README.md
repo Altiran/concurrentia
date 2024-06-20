@@ -12,13 +12,13 @@ Experience the efficiency of parallel processing with "Fully Threaded" – where
 empowering you to focus on what truly matters: your code.
 
 [ ![Discord](https://canary.discordapp.com/api/guilds/729950513352933386/widget.png) ](https://discord.gg/jsSGFeR)
-[ ![Latest Release](https://img.shields.io/badge/Latest%20Release-1.0-orange)](https://github.com/electrosoftllc/fully-threaded/releases/tag/1.0)
-[ ![GitHub Forks](https://img.shields.io/github/forks/electrosoftllc/fully-threaded.svg)](https://github.com/electrosoftllc/fully-threaded/fork)
-[ ![GitHub Stars](https://img.shields.io/github/stars/electrosoftllc/fully-threaded.svg)](https://github.com/electrosoftllc/fully-threaded/stargazers)
-[ ![GitHub Watches](https://img.shields.io/github/watchers/electrosoftllc/fully-threaded.svg)](https://github.com/electrosoftllc/fully-threaded/watchers)
-[ ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/electrosoftllc/fully-threaded/graphs/commit-activity)
-[ ![Maintainer](https://img.shields.io/badge/Maintainer-ElectroSoft_LLC-blue)](https://github.com/electrosoftllc)
-[ ![Build Status](https://circleci.com/gh/electrosoftllc/fully-threaded.svg?style=svg "Build Status")](https://github.com/electrosoftllc/fully-threaded)
+[ ![Latest Release](https://img.shields.io/badge/Latest%20Release-1.0.1-orange)](https://github.com/Altiran/fully-threaded/releases/tag/1.0.1)
+[ ![GitHub Forks](https://img.shields.io/github/forks/Altiran/fully-threaded.svg)](https://github.com/Altiran/fully-threaded/fork)
+[ ![GitHub Stars](https://img.shields.io/github/stars/Altiran/fully-threaded.svg)](https://github.com/Altiran/fully-threaded/stargazers)
+[ ![GitHub Watches](https://img.shields.io/github/watchers/Altiran/fully-threaded.svg)](https://github.com/Altiran/fully-threaded/watchers)
+[ ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Altiran/fully-threaded/graphs/commit-activity)
+[ ![Maintainer](https://img.shields.io/badge/Maintainer-Altiran_Studios-blue)](https://github.com/Altiran)
+[ ![Build Status](https://github.com/Altiran/fully-threaded/actions/workflows/main.yml/badge.svg "Build Status")](https://github.com/altiran/fully-threaded)
 
 **Like the project? Make sure to leave a ⭐ on the repository!**
 
@@ -28,10 +28,13 @@ empowering you to focus on what truly matters: your code.
 
 ```gradle
 repositories {
-  maven { url 'https://raw.githubusercontent.com/electrosoftllc/fully-threaded/master/repo/' }
+  maven { url 'https://raw.githubusercontent.com/Altiran/fully-threaded/master/repo/' }
 }
+```
+
+```gradle
 dependencies {
-  implementation 'in.electrosoft:FullyThreaded:1.0'
+  implementation 'com.altiran:FullyThreaded:1.0'
 }
 ```
 
@@ -40,27 +43,30 @@ dependencies {
 ```xml
 <repository>
    <id>fully-threaded</id>
-   <url>https://raw.githubusercontent.com/electrosoftllc/fully-threaded/master/repo/</url>
+   <url>https://raw.githubusercontent.com/Altiran/fully-threaded/master/repo/</url>
 </repository>
+```
+
+```xml
 <dependency>
-  <groupId>in.electrosoft</groupId>
+  <groupId>com.altiran</groupId>
   <artifactId>FullyThreaded</artifactId>
-  <version>1.0</version>
+  <version>1.0.1</version>
 </dependency>
 ```
 
 ##### JAR:
 
-Pre-built JAR downloads are available from [GitHub Releases](https://github.com/electrosoftllc/fully-threaded/releases).
+Pre-built JAR downloads are available from [GitHub Releases](https://github.com/altiran/fully-threaded/releases).
 
 ## How to Use?
 
-You can see the official usage guide [here](https://github.com/electrosoftllc/fully-threaded/wiki/Usage-Examples).
+You can see the official usage guide [here](https://github.com/altiran/fully-threaded/wiki/Usage-Examples).
 
 ## I Need Help
 
-Check out the [Wiki tab](https://github.com/electrosoftllc/fully-threaded/wiki). If you are still stuck,
-join [our Discord server](https://discord.gg/jsSGFeR).
+Check out the [Wiki tab](https://github.com/Altiran/fully-threaded/wiki).
+If you are still stuck, join [our Discord server](https://discord.gg/jsSGFeR).
 
 ## Contributing
 
@@ -75,25 +81,8 @@ Your contributions to this project are highly valued. To get started, simply fol
 6. Your code will undergo review and, upon approval, will be merged into the main repository.
 
 Thank you for your commitment to enhancing our project. We look forward to your contributions!
-[Step-by-Step Guide](https://github.com/electrosoftllc/fully-threaded/wiki/Contribution-Guide)
+[Step-by-Step Guide](https://github.com/Altiran/fully-threaded/wiki/Contribution-Guide)
 
 ## License
 
-"Fully Threaded" is licensed under
-the [Apache 2.0 License](https://github.com/electrosoftllc/fully-threaded/wiki/License).
-
-```
-Copyright 2017-present ElectroSoft LLC. All rights reserved. All wrongs reversed.
-
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-```
+"Fully Threaded" is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).

@@ -1,0 +1,37 @@
+{
+    "extends": [
+        "config:base",
+        ":semanticCommits",
+        ":semanticCommitTypeAll(Deps)",
+        ":semanticCommitScopeDisabled",
+        ":automergeAll",
+        ":automergeBranch",
+        ":disableDependencyDashboard",
+        ":pinVersions",
+        ":label(dependencies)"
+    ],
+    "packageRules": [
+        {
+            "description": "Automate workflow dependency updates",
+            "matchPaths": [
+                "**/.github/workflows/**"
+            ],
+            "matchManagers": [
+                "github-actions"
+            ]
+        },
+        {
+            "description": "Automate Gradle dependency updates",
+            "matchManagers": [
+                "gradle"
+            ]
+        },
+        {
+            "description": "Automate Gradle Wrapper updates",
+            "matchManagers": [
+                "gradle-wrapper"
+            ]
+        }
+    ],
+    "automerge": true
+}
