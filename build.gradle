@@ -3,7 +3,7 @@ plugins {
     id 'idea' apply true
     id 'java-library' apply true
     id 'maven-publish' apply true
-    id('org.jetbrains.dokka') version '1.9.20' apply true
+    id 'org.jetbrains.dokka' version '1.9.20' apply true
     id 'org.jetbrains.kotlin.jvm' version '2.0.0' apply true
 }
 
@@ -87,12 +87,12 @@ publishing {
 
     publications {
         create('mavenJava', MavenPublication) {
-            //from components.java
-            from components.kotlin
+            artifactId = project.tr_name
+            from(components.kotlin)
             pom {
-                name = 'FullyThreaded'
+                name = 'concurrentia'
                 description = 'Simple and open-source multithreading utility.'
-                url = 'https://github.com/Altiran/fully-threaded'
+                url = 'https://github.com/Altiran/concurrentia'
                 licenses {
                     license {
                         name = 'GNU General Public License v3.0'
