@@ -19,6 +19,7 @@ empowering you to focus on what truly matters: your code.
 [ ![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Altiran/concurrentia/graphs/commit-activity)
 [ ![Maintainer](https://img.shields.io/badge/Maintainer-Altiran_Studios-blue)](https://github.com/Altiran)
 [ ![Build Status](https://github.com/Altiran/concurrentia/actions/workflows/main.yml/badge.svg "Build Status")](https://github.com/Altiran/concurrentia)
+[ ![WakaTime](https://wakatime.com/badge/github/Altiran/concurrentia.svg)](https://wakatime.com/badge/github/Altiran/concurrentia)
 
 **Like the project? Make sure to leave a ⭐ on the repository!**
 
@@ -34,7 +35,7 @@ repositories {
 
 ```gradle
 dependencies {
-  implementation 'com.altiran:concurrentia:1.0'
+  implementation 'com.altiran:concurrentia:1.0.1'
 }
 ```
 

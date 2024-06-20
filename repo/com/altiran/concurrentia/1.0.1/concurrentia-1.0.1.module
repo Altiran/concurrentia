@@ -29,11 +29,11 @@
         {
           "name": "concurrentia-1.0.1.jar",
           "url": "concurrentia-1.0.1.jar",
-          "size": 1816002,
-          "sha512": "2556d6f535cb3bc9f41aa1e9583696080834dc0d88a6dd63b787740b616c3c1601169b03a6e2c33caf4a5169b13cda864c773543585fa6e095cb4f37930baa2c",
-          "sha256": "8428bd394a9d59474f19adc9df003e411c3343f4550fbf8544659a17c3997393",
-          "sha1": "9f90e20ad221cce57a77dfd17d8d3dfe4a161d73",
-          "md5": "2fee9242d6653f14b3127d16f115b130"
+          "size": 1816001,
+          "sha512": "664303a21e2b968250f65531fc499ad16cd0802a54e613758c9718408c43fbae4f43ae01f515d37b03f948dfb9fe0b6e218af69e74ea0f81ebf71cb40982ade0",
+          "sha256": "c2384eea3dca9483d3ef12368883eb397af8c4821d48b486d620e07d2ddbdc08",
+          "sha1": "16efcc2a191582b6e7dc169e8ff5544851c85f0c",
+          "md5": "ec3d999da54e74f67ba1e2367df6b49d"
         }
       ]
     },
@@ -61,11 +61,11 @@
         {
           "name": "concurrentia-1.0.1.jar",
           "url": "concurrentia-1.0.1.jar",
-          "size": 1816002,
-          "sha512": "2556d6f535cb3bc9f41aa1e9583696080834dc0d88a6dd63b787740b616c3c1601169b03a6e2c33caf4a5169b13cda864c773543585fa6e095cb4f37930baa2c",
-          "sha256": "8428bd394a9d59474f19adc9df003e411c3343f4550fbf8544659a17c3997393",
-          "sha1": "9f90e20ad221cce57a77dfd17d8d3dfe4a161d73",
-          "md5": "2fee9242d6653f14b3127d16f115b130"
+          "size": 1816001,
+          "sha512": "664303a21e2b968250f65531fc499ad16cd0802a54e613758c9718408c43fbae4f43ae01f515d37b03f948dfb9fe0b6e218af69e74ea0f81ebf71cb40982ade0",
+          "sha256": "c2384eea3dca9483d3ef12368883eb397af8c4821d48b486d620e07d2ddbdc08",
+          "sha1": "16efcc2a191582b6e7dc169e8ff5544851c85f0c",
+          "md5": "ec3d999da54e74f67ba1e2367df6b49d"
         }
       ]
     }
