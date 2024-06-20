@@ -12,7 +12,7 @@ Experience the efficiency of parallel processing with "Concurrentia" – where s
 empowering you to focus on what truly matters: your code.
 
 [ ![Discord](https://canary.discordapp.com/api/guilds/729950513352933386/widget.png) ](https://discord.gg/jsSGFeR)
-[ ![Latest Release](https://img.shields.io/badge/Latest%20Release-1.0.1-orange)](https://github.com/Altiran/concurrentia/releases/tag/1.0.1)
+[ ![Latest Release](https://img.shields.io/badge/Latest%20Release-1.0.2-orange)](https://github.com/Altiran/concurrentia/releases/tag/1.0.2)
 [ ![GitHub Forks](https://img.shields.io/github/forks/Altiran/concurrentia.svg)](https://github.com/Altiran/concurrentia/fork)
 [ ![GitHub Stars](https://img.shields.io/github/stars/Altiran/concurrentia.svg)](https://github.com/Altiran/concurrentia/stargazers)
 [ ![GitHub Watches](https://img.shields.io/github/watchers/Altiran/concurrentia.svg)](https://github.com/Altiran/concurrentia/watchers)
@@ -27,15 +27,18 @@ empowering you to focus on what truly matters: your code.
 
 ##### Gradle:
 
-```gradle
+```groovy
 repositories {
-  maven { url 'https://raw.githubusercontent.com/Altiran/concurrentia/main/repo/' }
+    maven {
+        name 'concurrentia'
+        url 'https://raw.githubusercontent.com/Altiran/concurrentia/main/repo'
+    }
 }
 ```
 
-```gradle
+```groovy
 dependencies {
-  implementation 'com.altiran:concurrentia:1.0.1'
+    implementation 'com.altiran:concurrentia:1.0.2'
 }
 ```
 
@@ -45,7 +48,7 @@ dependencies {
 
 <repository>
     <id>concurrentia</id>
-    <url>https://raw.githubusercontent.com/Altiran/concurrentia/main/repo/</url>
+    <url>https://raw.githubusercontent.com/Altiran/concurrentia/main/repo</url>
 </repository>
 ```
 
@@ -54,7 +57,7 @@ dependencies {
 <dependency>
     <groupId>com.altiran</groupId>
     <artifactId>concurrentia</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
 </dependency>
 ```
 
@@ -64,8 +67,49 @@ Pre-built JAR downloads are available from [GitHub Releases](https://github.com/
 
 ## How to Use?
 
+##### Java Example:
+
 ```java
 import com.altiran.concurrentia.Concurrentia;
+import com.altiran.concurrentia.strategy.MultithreadingProtocol;
+
+public class AsyncExample {
+    private MultithreadingProtocol mt;
+    private Concurrentia instance;
+
+    public AsyncExample() {
+        instance = new Concurrentia();
+        mt = instance.getMultiThreading();
+    }
+
+    public void main() {
+        mt.run(() -> {
+            System.out.println("Hello World!"); // This will be executed in a separate thread asynchronously
+        });
+    }
+}
+```
+
+##### Kotlin Example:
+
+```kotlin
+import com.altiran.concurrentia.Concurrentia
+import com.altiran.concurrentia.strategy.MultithreadingProtocol
+
+class AsyncExample {
+    private val mt: MultithreadingProtocol
+    private val instance = Concurrentia()
+
+    init {
+        mt = instance.multiThreading
+    }
+
+    fun main() {
+        mt.run {
+            println("Hello World!") // This will be executed in a separate thread asynchronously
+        }
+    }
+}
 ```
 
 ## I Need Help

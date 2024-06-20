@@ -26,7 +26,7 @@ If applicable, add screenshots to help explain your problem.
 **Version (please complete the following information):**
 
 - OS: [e.g. Windows, MacOS, Linux]
-- Build Version [e.g. 1.0.1]
+- Build Version [e.g. 1.0.2]
 
 **Additional context**
 Add any other context about the problem here.

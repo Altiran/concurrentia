@@ -6,7 +6,7 @@ The versions of the project listed here are currently being supported with secur
 
 | Version  | Supported          |
 |----------|--------------------|
-| >= 1.0.1 | :white_check_mark: |
+| >= 1.0.2 | :white_check_mark: |
 
 ## Reporting a Vulnerability
 

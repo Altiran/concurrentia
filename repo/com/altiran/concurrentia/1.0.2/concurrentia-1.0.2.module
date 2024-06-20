@@ -3,7 +3,7 @@
   "component": {
     "group": "com.altiran",
     "module": "concurrentia",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "attributes": {
       "org.gradle.status": "release"
     }
@@ -15,7 +15,7 @@
   },
   "variants": [
     {
-      "name": "apiElements",
+      "name": "apiElements-published",
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
@@ -27,18 +27,18 @@
       },
       "files": [
         {
-          "name": "concurrentia-1.0.1.jar",
-          "url": "concurrentia-1.0.1.jar",
+          "name": "concurrentia-1.0.2.jar",
+          "url": "concurrentia-1.0.2.jar",
           "size": 1816001,
-          "sha512": "d5c755c79feaa6ba1a069e6a3a09da0b27fad61a4798d86714beef5aab02656cb251339a0929512b83034c3057fdde76bb9014e1c99723a3c07405a8b96f00df",
-          "sha256": "515019d6fef071098ee266cc85d5997f299ef7a51502b07826e2ca4c902c46ed",
-          "sha1": "232308b6fa50d17b8f18039d2b3f50e178b09acb",
-          "md5": "e6be984a783f9fa4aea10fccc52fee19"
+          "sha512": "065d0cdd36f85ed7c8b21dc8cc736de128c7717a152888b16955a9ed62235af83648d41a7565fc91a1d935727cd2c62f8ce2ee07f561eb7f4caea678e56ddc9a",
+          "sha256": "51d6c5264c8d2abc9dbd85d73df1425bcfea5ee6dafe0c9b032d00cb7f7a5de7",
+          "sha1": "8f8e015bb4706a80699812cb830dc1e983ae499e",
+          "md5": "3aca04bb851941aadcd2d6dffdb6b31a"
         }
       ]
     },
     {
-      "name": "runtimeElements",
+      "name": "runtimeElements-published",
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
@@ -59,13 +59,13 @@
       ],
       "files": [
         {
-          "name": "concurrentia-1.0.1.jar",
-          "url": "concurrentia-1.0.1.jar",
+          "name": "concurrentia-1.0.2.jar",
+          "url": "concurrentia-1.0.2.jar",
           "size": 1816001,
-          "sha512": "d5c755c79feaa6ba1a069e6a3a09da0b27fad61a4798d86714beef5aab02656cb251339a0929512b83034c3057fdde76bb9014e1c99723a3c07405a8b96f00df",
-          "sha256": "515019d6fef071098ee266cc85d5997f299ef7a51502b07826e2ca4c902c46ed",
-          "sha1": "232308b6fa50d17b8f18039d2b3f50e178b09acb",
-          "md5": "e6be984a783f9fa4aea10fccc52fee19"
+          "sha512": "065d0cdd36f85ed7c8b21dc8cc736de128c7717a152888b16955a9ed62235af83648d41a7565fc91a1d935727cd2c62f8ce2ee07f561eb7f4caea678e56ddc9a",
+          "sha256": "51d6c5264c8d2abc9dbd85d73df1425bcfea5ee6dafe0c9b032d00cb7f7a5de7",
+          "sha1": "8f8e015bb4706a80699812cb830dc1e983ae499e",
+          "md5": "3aca04bb851941aadcd2d6dffdb6b31a"
         }
       ]
     }

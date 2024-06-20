@@ -8,7 +8,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.altiran</groupId>
   <artifactId>concurrentia</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <name>concurrentia</name>
   <description>Simple and open-source multithreading utility.</description>
   <url>https://github.com/Altiran/concurrentia</url>
