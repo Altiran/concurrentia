@@ -15,7 +15,7 @@
   },
   "variants": [
     {
-      "name": "apiElements-published",
+      "name": "apiElements",
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
@@ -30,15 +30,15 @@
           "name": "concurrentia-1.0.1.jar",
           "url": "concurrentia-1.0.1.jar",
           "size": 1816001,
-          "sha512": "664303a21e2b968250f65531fc499ad16cd0802a54e613758c9718408c43fbae4f43ae01f515d37b03f948dfb9fe0b6e218af69e74ea0f81ebf71cb40982ade0",
-          "sha256": "c2384eea3dca9483d3ef12368883eb397af8c4821d48b486d620e07d2ddbdc08",
-          "sha1": "16efcc2a191582b6e7dc169e8ff5544851c85f0c",
-          "md5": "ec3d999da54e74f67ba1e2367df6b49d"
+          "sha512": "d5c755c79feaa6ba1a069e6a3a09da0b27fad61a4798d86714beef5aab02656cb251339a0929512b83034c3057fdde76bb9014e1c99723a3c07405a8b96f00df",
+          "sha256": "515019d6fef071098ee266cc85d5997f299ef7a51502b07826e2ca4c902c46ed",
+          "sha1": "232308b6fa50d17b8f18039d2b3f50e178b09acb",
+          "md5": "e6be984a783f9fa4aea10fccc52fee19"
         }
       ]
     },
     {
-      "name": "runtimeElements-published",
+      "name": "runtimeElements",
       "attributes": {
         "org.gradle.category": "library",
         "org.gradle.dependency.bundling": "external",
@@ -62,10 +62,10 @@
           "name": "concurrentia-1.0.1.jar",
           "url": "concurrentia-1.0.1.jar",
           "size": 1816001,
-          "sha512": "664303a21e2b968250f65531fc499ad16cd0802a54e613758c9718408c43fbae4f43ae01f515d37b03f948dfb9fe0b6e218af69e74ea0f81ebf71cb40982ade0",
-          "sha256": "c2384eea3dca9483d3ef12368883eb397af8c4821d48b486d620e07d2ddbdc08",
-          "sha1": "16efcc2a191582b6e7dc169e8ff5544851c85f0c",
-          "md5": "ec3d999da54e74f67ba1e2367df6b49d"
+          "sha512": "d5c755c79feaa6ba1a069e6a3a09da0b27fad61a4798d86714beef5aab02656cb251339a0929512b83034c3057fdde76bb9014e1c99723a3c07405a8b96f00df",
+          "sha256": "515019d6fef071098ee266cc85d5997f299ef7a51502b07826e2ca4c902c46ed",
+          "sha1": "232308b6fa50d17b8f18039d2b3f50e178b09acb",
+          "md5": "e6be984a783f9fa4aea10fccc52fee19"
         }
       ]
     }

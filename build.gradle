@@ -88,7 +88,7 @@ publishing {
     publications {
         create('mavenJava', MavenPublication) {
             artifactId = project.tr_name
-            from(components.kotlin)
+            from components.java
             pom {
                 name = 'concurrentia'
                 description = 'Simple and open-source multithreading utility.'
