@@ -12,31 +12,31 @@ runs:
     steps:
         -   name: Set up JDK for Linux and macOS
             if: runner.os != 'Windows'
-            shell: bash
             run: |
-                semeru_version="jdk-${{ matrix.java-version }}"
-                if [ ${{ matrix.os }} = "ubuntu-latest" ]; then
-                    semeru_build="jdk-${{ matrix.java-version }}+35_openj9-0.24.0"
-                    curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru{semeru-version}-binaries/releases/download/${semeru_build}/OpenJDK${{ matrix.java-version }}U-jdk_x64_linux_openj9_0.24.0.tar.gz"
-                elif [ ${{ matrix.os }} = "macos-latest" ]; then
-                    semeru_build="jdk-${{ matrix.java-version }}+35_openj9-0.24.0"
-                    curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru{semeru-version}-binaries/releases/download/${semeru_build}/OpenJDK${{ matrix.java-version }}U-jdk_x64_mac_openj9_0.24.0.tar.gz"
+                semeru_version="jdk-${{ inputs.java-version }}"
+                if [ $RUNNER_OS = "Linux" ]; then
+                  semeru_build="jdk-${{ inputs.java-version }}+35_openj9-0.40.0"
+                  curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru21-binaries/releases/download/${semeru_build}/ibm-semeru-open-jdk_x64_linux_openj9_${semeru_version}.tar.gz"
+                elif [ $RUNNER_OS = "macOS" ]; then
+                  semeru_build="jdk-${{ inputs.java-version }}+35_openj9-0.40.0"
+                  curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru21-binaries/releases/download/${semeru_build}/ibm-semeru-open-jdk_x64_mac_openj9_${semeru_version}.tar.gz"
                 fi
                 tar -xzf semeru.tar.gz
-                sudo mv jdk-${{ matrix.java-version }}+35 /opt/ibm-semeru-jdk
+                sudo mv jdk-${{ inputs.java-version }}+35 /opt/ibm-semeru-jdk
                 echo "JAVA_HOME=/opt/ibm-semeru-jdk" >> $GITHUB_ENV
                 echo "/opt/ibm-semeru-jdk/bin" >> $GITHUB_PATH
+            shell: bash
 
         -   name: Set up JDK for Windows
             if: runner.os == 'Windows'
-            shell: cmd
             run: |
-                $jdk_version = "${{ matrix.java-version }}"
-                $url = "https://github.com/ibmruntimes/semeru{semeru-version}-binaries/releases/download/jdk-$jdk_version%2B35_openj9-0.24.0/OpenJDK${jdk_version}U-jdk_x64_windows_openj9_0.24.0.zip"
+                $jdk_version = "${{ inputs.java-version }}"
+                $url = "https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-$jdk_version%2B35_openj9-0.40.0/ibm-semeru-open-jdk_x64_windows_openj9_${jdk_version}.zip"
                 Invoke-WebRequest -Uri $url -OutFile "semeru.zip"
                 Expand-Archive -Path "semeru.zip" -DestinationPath "C:\semeru"
                 echo "JAVA_HOME=C:\semeru\jdk-${jdk_version}+35" >> $env:GITHUB_ENV
                 echo "C:\semeru\jdk-${jdk_version}+35\bin" >> $env:GITHUB_PATH
+            shell: pwsh
 
         -   name: Verify Java version
             shell: bash
