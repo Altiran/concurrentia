@@ -57,7 +57,7 @@ jobs:
             -   name: Upload Build Results
                 uses: actions/upload-artifact@v4
                 with:
-                    name: ${{ PROJECT_NAME }} Build Results (Java ${{ matrix.java }} on ${{ matrix.os }})
+                    name: ${{ env.PROJECT_NAME }} Build Results (Java ${{ matrix.java }} on ${{ matrix.os }})
                     path: ${{ github.workspace }}/repo/
 
         outputs:
@@ -97,5 +97,5 @@ jobs:
             -   name: Upload Test Results
                 uses: actions/upload-artifact@v4
                 with:
-                    name: ${{ PROJECT_NAME }} Test Reports (Java ${{ matrix.java }} on ${{ matrix.os }})
+                    name: ${{ env.PROJECT_NAME }} Test Reports (Java ${{ matrix.java }} on ${{ matrix.os }})
                     path: ${{ github.workspace }}/build/reports/
