@@ -12,6 +12,7 @@ runs:
     steps:
         -   name: Set up JDK for Linux and macOS
             if: runner.os != 'Windows'
+            shell: bash
             run: |
                 semeru_version="jdk-${{ matrix.java-version }}"
                 if [ ${{ matrix.os }} = "ubuntu-latest" ]; then
@@ -28,6 +29,7 @@ runs:
 
         -   name: Set up JDK for Windows
             if: runner.os == 'Windows'
+            shell: cmd
             run: |
                 $jdk_version = "${{ matrix.java-version }}"
                 $url = "https://github.com/ibmruntimes/semeru{semeru-version}-binaries/releases/download/jdk-$jdk_version%2B35_openj9-0.24.0/OpenJDK${jdk_version}U-jdk_x64_windows_openj9_0.24.0.zip"
