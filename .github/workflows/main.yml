@@ -44,12 +44,12 @@ jobs:
                 with:
                     java-version: ${{ matrix.java }}
 
-            -   name: Retrieve Project Name
-                run: echo "PROJECT_NAME=$(${{github.workspace}}/gradlew -q printProjectName)" >> $GITHUB_OUTPUT
-                id: project_name
-
-            -   name: Get Project Name
-                run: echo "PROJECT_NAME=${{steps.project_name.outputs.PROJECT_NAME}}" >> $GITHUB_ENV
+#            -   name: Retrieve Project Name
+#                run: echo "PROJECT_NAME=$(${{github.workspace}}/gradlew -q printProjectName)" >> $GITHUB_OUTPUT
+#                id: project_name
+#
+#            -   name: Get Project Name
+#                run: echo "PROJECT_NAME=${{steps.project_name.outputs.PROJECT_NAME}}" >> $GITHUB_ENV
 
             -   name: Build with Gradle
                 run: ./gradlew assemble --info
