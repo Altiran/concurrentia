@@ -52,13 +52,13 @@ jobs:
                 run: echo "PROJECT_NAME=${{steps.project_name.outputs.PROJECT_NAME}}" >> $GITHUB_ENV
 
             -   name: Build with Gradle
-                run: ./gradlew assemble --info
+                run: ./gradlew assemble publish --info
 
             -   name: Upload build results
                 uses: actions/upload-artifact@v4
                 with:
-                    name: ${{ matrix.os }} Java ${{ matrix.java }} build results
-                    path: ${{ github.workspace }}/build/libs/
+                    name: ${{ matrix.os }} Java ${{ matrix.java }} Build Results
+                    path: ${{ github.workspace }}/repo/
 
         outputs:
             project_name: ${{ steps.project_name.outputs.PROJECT_NAME }}

@@ -22,11 +22,11 @@ java {
 
 compileJava.options.encoding = 'UTF-8'
 
-group = project.tr_group
-version = project.tr_version
+group = project.prod_group
+version = project.prod_version
 
 base {
-    archivesName = project.tr_name
+    archivesName = project.prod_name
 }
 
 repositories {
@@ -63,9 +63,9 @@ jar {
     manifest.attributes(
         'Built-By': buildUser,
         'Created-By': "${buildJava} (${buildVendor})",
-        'Implementation-Title': project.tr_name,
-        'Implementation-Version': project.tr_version,
-        'Implementation-Vendor': project.tr_website
+        'Implementation-Title': project.prod_name,
+        'Implementation-Version': project.prod_version,
+        'Implementation-Vendor': project.prod_website
     )
 }
 
@@ -87,7 +87,7 @@ publishing {
 
     publications {
         create('mavenJava', MavenPublication) {
-            artifactId = project.tr_name
+            artifactId = project.prod_name
             from(components.kotlin)
             pom {
                 name = 'concurrentia'

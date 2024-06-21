@@ -12,7 +12,7 @@ Experience the efficiency of parallel processing with "Concurrentia" – where s
 empowering you to focus on what truly matters: your code.
 
 [ ![Discord](https://canary.discordapp.com/api/guilds/729950513352933386/widget.png) ](https://discord.gg/jsSGFeR)
-[ ![Latest Release](https://img.shields.io/badge/Latest%20Release-1.0.2-orange)](https://github.com/Altiran/concurrentia/releases/tag/1.0.2)
+[ ![Latest Release](https://img.shields.io/badge/Latest%20Release-v1.0.3-orange)](https://github.com/Altiran/concurrentia/releases/tag/v1.0.3)
 [ ![GitHub Forks](https://img.shields.io/github/forks/Altiran/concurrentia.svg)](https://github.com/Altiran/concurrentia/fork)
 [ ![GitHub Stars](https://img.shields.io/github/stars/Altiran/concurrentia.svg)](https://github.com/Altiran/concurrentia/stargazers)
 [ ![GitHub Watches](https://img.shields.io/github/watchers/Altiran/concurrentia.svg)](https://github.com/Altiran/concurrentia/watchers)
@@ -38,7 +38,7 @@ repositories {
 
 ```groovy
 dependencies {
-    implementation 'com.altiran:concurrentia:1.0.2'
+    implementation 'com.altiran:concurrentia:1.0.3'
 }
 ```
 
@@ -57,7 +57,7 @@ dependencies {
 <dependency>
     <groupId>com.altiran</groupId>
     <artifactId>concurrentia</artifactId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
 </dependency>
 ```
 
