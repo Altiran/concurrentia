@@ -13,19 +13,16 @@ runs:
         -   name: Set up JDK for Linux and macOS
             if: runner.os != 'Windows'
             run: |
-                semeru_version="jdk-${{ inputs.java-version }}"
                 if [ $RUNNER_OS = "Linux" ]; then
-                  semeru_build="jdk-${{ inputs.java-version }}+35_openj9-0.40.0"
-                  curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru21-binaries/releases/download/${semeru_build}/ibm-semeru-open-jdk_x64_linux_openj9_${semeru_version}.tar.gz"
+                  curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3+9_openj9-0.44.0/ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz"
                   tar -xzf semeru.tar.gz
-                  sudo mv jdk-${{ inputs.java-version }}+35 /opt/ibm-semeru-jdk
+                  sudo mv jdk-21.0.3+9 /opt/ibm-semeru-jdk
                   echo "JAVA_HOME=/opt/ibm-semeru-jdk" >> $GITHUB_ENV
                   echo "/opt/ibm-semeru-jdk/bin" >> $GITHUB_PATH
                 elif [ $RUNNER_OS = "macOS" ]; then
-                  semeru_build="jdk-${{ inputs.java-version }}+35_openj9-0.40.0"
-                  curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru21-binaries/releases/download/${semeru_build}/ibm-semeru-open-jdk_x64_mac_openj9_${semeru_version}.tar.gz"
+                  curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3+9_openj9-0.44.0/ibm-semeru-open-jdk_x64_mac_21.0.3_9_openj9-0.44.0.tar.gz"
                   tar -xzf semeru.tar.gz
-                  sudo mv jdk-${{ inputs.java-version }}+35 /opt/ibm-semeru-jdk
+                  sudo mv jdk-21.0.3+9 /opt/ibm-semeru-jdk
                   echo "JAVA_HOME=/opt/ibm-semeru-jdk" >> $GITHUB_ENV
                   echo "/opt/ibm-semeru-jdk/bin" >> $GITHUB_PATH
                 fi
@@ -34,12 +31,11 @@ runs:
         -   name: Set up JDK for Windows
             if: runner.os == 'Windows'
             run: |
-                $jdk_version = "${{ inputs.java-version }}"
-                $url = "https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-$jdk_version%2B35_openj9-0.40.0/ibm-semeru-open-jdk_x64_windows_openj9_${jdk_version}.zip"
+                $url = "https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3+9_openj9-0.44.0/ibm-semeru-open-jdk_x64_windows_21.0.3_9_openj9-0.44.0.zip"
                 Invoke-WebRequest -Uri $url -OutFile "semeru.zip"
                 Expand-Archive -Path "semeru.zip" -DestinationPath "C:\semeru"
-                echo "JAVA_HOME=C:\semeru\jdk-${jdk_version}+35" >> $env:GITHUB_ENV
-                echo "C:\semeru\jdk-${jdk_version}+35\bin" >> $env:GITHUB_PATH
+                echo "JAVA_HOME=C:\semeru\jdk-21.0.3+9" >> $env:GITHUB_ENV
+                echo "C:\semeru\jdk-21.0.3+9\bin" >> $env:GITHUB_PATH
             shell: pwsh
 
         -   name: Grant execute permission for gradlew
