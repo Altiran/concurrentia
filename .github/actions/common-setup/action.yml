@@ -21,6 +21,7 @@ runs:
                   semeru_build="jdk-${{ inputs.java-version }}+35_openj9-0.40.0"
                   curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru21-binaries/releases/download/${semeru_build}/ibm-semeru-open-jdk_x64_mac_openj9_${semeru_version}.tar.gz"
                 fi
+                file semeru.tar.gz
                 tar -xzf semeru.tar.gz
                 sudo mv jdk-${{ inputs.java-version }}+35 /opt/ibm-semeru-jdk
                 echo "JAVA_HOME=/opt/ibm-semeru-jdk" >> $GITHUB_ENV
