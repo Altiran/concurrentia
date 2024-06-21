@@ -16,15 +16,15 @@ runs:
                 if [ $RUNNER_OS = "Linux" ]; then
                   curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3+9_openj9-0.44.0/ibm-semeru-open-jdk_x64_linux_21.0.3_9_openj9-0.44.0.tar.gz"
                   tar -xzf semeru.tar.gz
-                  sudo mv jdk-21.0.3+9 /opt/ibm-semeru-jdk
-                  echo "JAVA_HOME=/opt/ibm-semeru-jdk" >> $GITHUB_ENV
-                  echo "/opt/ibm-semeru-jdk/bin" >> $GITHUB_PATH
+                  sudo mv jdk-21.0.3+9 /home/ibm-semeru-jdk
+                  echo "JAVA_HOME=/home/ibm-semeru-jdk" >> $GITHUB_ENV
+                  echo "/home/ibm-semeru-jdk/bin" >> $GITHUB_PATH
                 elif [ $RUNNER_OS = "macOS" ]; then
                   curl -L -o semeru.tar.gz "https://github.com/ibmruntimes/semeru21-binaries/releases/download/jdk-21.0.3+9_openj9-0.44.0/ibm-semeru-open-jdk_x64_mac_21.0.3_9_openj9-0.44.0.tar.gz"
                   tar -xzf semeru.tar.gz
-                  sudo mv jdk-21.0.3+9 /opt/ibm-semeru-jdk
-                  echo "JAVA_HOME=/opt/ibm-semeru-jdk" >> $GITHUB_ENV
-                  echo "/opt/ibm-semeru-jdk/bin" >> $GITHUB_PATH
+                  sudo mv jdk-21.0.3+9 /home/ibm-semeru-jdk
+                  echo "JAVA_HOME=/home/ibm-semeru-jdk" >> $GITHUB_ENV
+                  echo "/home/ibm-semeru-jdk/bin" >> $GITHUB_PATH
                 fi
             shell: bash
 
@@ -37,6 +37,10 @@ runs:
                 echo "JAVA_HOME=C:\semeru\jdk-21.0.3+9" >> $env:GITHUB_ENV
                 echo "C:\semeru\jdk-21.0.3+9\bin" >> $env:GITHUB_PATH
             shell: pwsh
+
+        -   name: Verify JDK installation
+            run: java -version
+            shell: bash
 
         -   name: Grant execute permission for gradlew
             if: runner.os != 'Windows'
