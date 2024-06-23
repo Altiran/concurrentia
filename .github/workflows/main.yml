@@ -11,7 +11,7 @@ on:
         branches:
             - 'main'
     schedule:
-        -   cron: '0 0 * * 0'
+        -   cron: '0 0 * * *'
     workflow_dispatch:
 
 concurrency:
@@ -27,10 +27,10 @@ jobs:
                 java: [ 21 ]
         steps:
             -   name: Checkout code
-                uses: actions/checkout@v4
+                uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
 
             -   name: Cache Gradle Dependencies
-                uses: actions/cache@v4
+                uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4
                 with:
                     path: |
                         ~/.gradle/caches
@@ -55,7 +55,7 @@ jobs:
                 run: ./gradlew assemble publish --info
 
             -   name: Upload Build Results
-                uses: actions/upload-artifact@v4
+                uses: actions/upload-artifact@552bf3722c16e81001aea7db72d8cedf64eb5f68 # v4
                 with:
                     name: Build Results (Java ${{ matrix.java }} on ${{ matrix.os }})
                     path: ${{ github.workspace }}/repo/
@@ -74,10 +74,10 @@ jobs:
             - build
         steps:
             -   name: Checkout code
-                uses: actions/checkout@v4
+                uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4
 
             -   name: Cache Gradle Dependencies
-                uses: actions/cache@v4
+                uses: actions/cache@0c45773b623bea8c8e75f6c82b208c3cf94ea4f9 # v4
                 with:
                     path: |
                         ~/.gradle/caches
@@ -95,7 +95,7 @@ jobs:
                 run: ./gradlew assemble check --info
 
             -   name: Upload Test Results
-                uses: actions/upload-artifact@v4
+                uses: actions/upload-artifact@552bf3722c16e81001aea7db72d8cedf64eb5f68 # v4
                 with:
                     name: Test Reports (Java ${{ matrix.java }} on ${{ matrix.os }})
                     path: ${{ github.workspace }}/build/reports/
