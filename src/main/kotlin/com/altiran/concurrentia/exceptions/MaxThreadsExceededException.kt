@@ -19,13 +19,19 @@
 package com.altiran.concurrentia.exceptions
 
 /**
- * Thrown when the max compatible number of threads is exceeded.
+ * Exception to be thrown when the maximum compatible number of threads is exceeded.
+ * Thrown at the runtime if the machine cannot support more threads.
+ *
+ * @author Ab20zip
+ * @param cause The cause of the exception.
+ * @since 1.0
  */
 class MaxThreadsExceededException(cause: Throwable) :
     Exception(
         String.format(
             String.format(
-                "The maximum thread amount capability was reached",
+                "Concurrentia Error: The maximum thread capability was reached.",
+                "Cannot create more threads. Check the system resources and try again",
                 cause
             )
         )

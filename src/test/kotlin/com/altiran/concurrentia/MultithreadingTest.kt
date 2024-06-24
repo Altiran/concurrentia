@@ -25,6 +25,13 @@ import org.junit.jupiter.api.DisplayName
 import org.junit.jupiter.api.Test
 import java.lang.Runnable
 
+/**
+ * Tests for the multithreading using Concurrentia.
+ *
+ * @author Ab20zip
+ * @since 1.0
+ * @see [com.altiran.concurrentia.Concurrentia]
+ */
 @ExperimentalCoroutinesApi
 class MultithreadingTest {
     @Test

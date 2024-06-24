@@ -21,9 +21,12 @@ package com.altiran.concurrentia.utils
 import net.jafama.FastMath
 import java.lang.management.ManagementFactory
 
-
 /**
- * Gets the maximum amount of memory available to the JVM at that time.
+ * Utility functions to get the maximum amount of memory
+ * available to the JVM and the memory usage of your application.
+ *
+ * @author Cequallium
+ * @since 1.0
  */
 object ClientMemoryRetriever {
     fun getMaxMemory(): Long {

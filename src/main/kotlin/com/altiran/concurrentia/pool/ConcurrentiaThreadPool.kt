@@ -25,8 +25,11 @@ import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.TimeUnit
 
 /**
- * @author Ab20zip
  * Create a thread pool so that we don't have to create a thread every time we call the multithreading protocol.
+ *
+ * @author Cequallium
+ * @since 1.0
+ * @see [com.altiran.concurrentia.strategy.MultithreadingProtocol]
  */
 object ConcurrentiaThreadPool {
     val executorPool: ExecutorService = ThreadPoolExecutor(

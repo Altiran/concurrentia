@@ -21,7 +21,16 @@ package com.altiran.concurrentia
 import com.altiran.concurrentia.strategy.MultithreadingProtocol
 
 /**
- * Allows you to run code in separate and more efficient threads.
+ * The main class of the library, allows you to execute runnable
+ * in separate and more efficient threads.
+ * <p>
+ * This is the entry point to the library. You can create a new
+ * instance of this class and use it to retrieve the multithreading
+ * protocol implementation.
+ *
+ * @author Ab20zip
+ * @since 1.0
+ * @see [com.altiran.concurrentia.strategy.MultithreadingProtocol]
  */
 open class Concurrentia() {
     val multiThreading: MultithreadingProtocol = MultithreadingProtocol()

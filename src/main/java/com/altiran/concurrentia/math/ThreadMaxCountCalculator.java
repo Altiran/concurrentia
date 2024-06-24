@@ -22,10 +22,14 @@ import com.altiran.concurrentia.utils.ClientMemoryRetriever;
 
 /**
  * Used for calculating the maximum number of threads that the system can handle.
+ *
+ * @author Ab20zip
+ * @since 1.0
  */
 public class ThreadMaxCountCalculator {
     // Constants for stack size per thread (default 1 MB)
     private static final long STACK_SIZE_PER_THREAD = 1024 * 1024; // 1 MB
+
     // Singleton instance of ClientMemoryRetriever.
     private static final ClientMemoryRetriever INSTANCE = ClientMemoryRetriever.INSTANCE;
 

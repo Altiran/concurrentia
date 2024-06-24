@@ -22,8 +22,14 @@ import java.util.concurrent.ThreadFactory
 import java.util.concurrent.atomic.AtomicInteger
 
 /**
- * All the threads that are used to achieve multithreading are created in this class.
  * Supporting class for the thread pool.
+ * This class is used to create customized threads with specific configurations.
+ * All the threads that are used to achieve multithreading are created in this class.
+ *
+ * @author Ab20zip
+ * @since 1.0
+ * @see [com.altiran.concurrentia.factory.ConcurrentiaThreadFactory]
+ * @see [com.altiran.concurrentia.pool.ConcurrentiaThreadPool]
  */
 object ConcurrentiaThreadFactory : ThreadFactory {
     private var counter: AtomicInteger = AtomicInteger(1)

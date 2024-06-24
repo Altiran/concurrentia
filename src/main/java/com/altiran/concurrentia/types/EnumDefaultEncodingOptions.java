@@ -19,7 +19,7 @@
 package com.altiran.concurrentia.types;
 
 /**
- * This enum contains the commonly used encoding options.
+ * This enumeration contains the commonly used encoding options.
  */
 public enum EnumDefaultEncodingOptions {
     /**

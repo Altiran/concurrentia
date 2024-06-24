@@ -23,7 +23,15 @@ import com.altiran.concurrentia.pool.ConcurrentiaThreadPool
 import java.util.concurrent.ThreadPoolExecutor
 
 /**
- * Contains the core multithreading protocol.
+ * Contains the core strategy to execute code asynchronously in separate threads.
+ * It uses the thread pool to manage the threads and execute the code.
+ *
+ * An instance of this class can be accessed from the main class of the library.
+ *
+ * @author Ab20zip
+ * @since 1.0
+ * @see [com.altiran.concurrentia.pool.ConcurrentiaThreadPool]
+ * @see [com.altiran.concurrentia.Concurrentia]
  */
 class MultithreadingProtocol {
     fun run(r: Runnable) {
