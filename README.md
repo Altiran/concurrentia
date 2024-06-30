@@ -120,3 +120,6 @@ If you are still stuck, join [our Discord server](https://discord.gg/jsSGFeR).
 ## License
 
 "Concurrentia" is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
+See [LICENSE.md](https://github.com/Altiran/concurrentia/blob/main/LICENSE.md) for details.
+
+<!-- MADE WITH ❤️ BY ALTIRAN -->
