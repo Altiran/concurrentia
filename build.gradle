@@ -43,7 +43,7 @@ idea {
 }
 
 dependencies {
-    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0-RC'
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0-RC.2'
     testImplementation 'org.jetbrains.kotlin:kotlin-test:2.0.10'
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.3'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
