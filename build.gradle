@@ -3,7 +3,7 @@ plugins {
     id 'idea' apply true
     id 'java-library' apply true
     id 'maven-publish' apply true
-    id 'org.jetbrains.dokka' version '1.9.20' apply true
+    id 'org.jetbrains.dokka' version '2.0.0' apply true
     id 'org.jetbrains.kotlin.jvm' version '2.1.0' apply true
 }
 
